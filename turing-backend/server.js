@@ -6,8 +6,6 @@ const bodyParser = require ( "body-parser" );
 
 const mysql = require ( "mysql" );
 
-const dotenv = require ("dotenv").config()
-
 const app = express();
 
 app.use ( bodyParser.json() );
@@ -16,16 +14,12 @@ app.use ( bodyParser.urlencoded ({ extended : true }));
 const knex = require ( "knex" ) ({
     client : "mysql" ,
     connection : {
-        host : process.env.DB_HOST , 
-        user : process.env.DB_USER ,
-        password : process.env.DB_PASSWORD ,
-        database : process.env.DB_DATABASE
+        host : "localhost" , 
+        user : "root" ,
+        password : "bhavnes" ,
+        database : "turing_api"
     }
 }); 
-
-// console.log (process.env.DB_HOST)
-
-// console.log ("Hello!")
 
 var department = express.Router();
 app.use ( "/departments" , department );
@@ -64,7 +58,7 @@ var shipping = express.Router();
 app.use ( "/shipping" , shipping );
 require ( "./turing_files/shipping" ) ( shipping , knex );
 
-app.listen ( process.env.PORT , () => {
+app.listen ( 5000 , () => {
     
     console.log("Working");
     
