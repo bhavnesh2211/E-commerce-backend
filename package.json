@@ -1,0 +1,30 @@
+{
+  "name": "turing_backend",
+  "version": "1.0.0",
+  "description": "Doing turing ecommerce backend. ",
+  "main": "department.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "bhavnesh",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.1",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhavnesh2211/E_Commerce_Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bhavnesh2211/E_Commerce_Backend/issues"
+  },
+  "homepage": "https://github.com/bhavnesh2211/E_Commerce_Backend#readme"
+}
